@@ -1,0 +1,48 @@
+<div class="container">
+    <h2>Add New Employee</h2>
+    <form #insertForm="ngForm" (ngSubmit)="insertDetails(insertForm)" class="insert-form">
+        
+        <!-- User ID -->
+        <div class="form-group">
+            <label for="id">User ID</label>
+            <input type="text" id="id" name="id" ngModel #id="ngModel" class="form-control" placeholder="Enter Employee ID" required>
+            <div class="error-message" *ngIf="id.touched && id.invalid">User ID is required</div>
+        </div>
+
+        <!-- First Name -->
+        <div class="form-group">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="fname" ngModel #fname="ngModel" class="form-control" placeholder="Enter First Name" required>
+            <div class="error-message" *ngIf="fname.touched && fname.invalid">First Name is required</div>
+        </div>
+
+        <!-- Last Name -->
+        <div class="form-group">
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lname" ngModel #lname="ngModel" class="form-control" placeholder="Enter Last Name" required>
+            <div class="error-message" *ngIf="lname.touched && lname.invalid">Last Name is required</div>
+        </div>
+
+        <!-- Age -->
+        <div class="form-group">
+            <label for="age">Age</label>
+            <input type="number" id="age" name="age" ngModel #age="ngModel" class="form-control" placeholder="Enter Age" required min="18">
+            <div class="error-message" *ngIf="age.touched && age.invalid">Age is required (Min: 18)</div>
+        </div>
+
+        <!-- Salary -->
+        <div class="form-group">
+            <label for="salary">Salary</label>
+            <input type="number" id="salary" name="salary" ngModel #salary="ngModel" class="form-control" placeholder="Enter Salary" required min="0">
+            <div class="error-message" *ngIf="salary.touched && salary.invalid">Salary is required (Min: 0)</div>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary" [disabled]="insertForm.invalid">Submit</button>
+
+    </form>
+<!-- <br>
+    <div>
+        <button class="btn btn-info" style="margin-right: 5px;" routerLink="/view">View All</button>
+    </div> -->
+</div>

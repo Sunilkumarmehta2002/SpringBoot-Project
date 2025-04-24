@@ -1,0 +1,30 @@
+<h1>View All Employees </h1>
+<br>
+
+<table class="table table-bordered table-striped table-hover">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">First name</th>
+        <th scope="col">Last name</th>
+        <th scope="col">Age</th>
+        <th scope="col">Salary</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let e of emp" class="text-center">
+        <td class="p-2">{{ e.id }}</td>
+        <td class="p-2">{{ e.fname }}</td>
+        <td class="p-2">{{ e.lname }}</td>
+        <td class="p-2">{{ e.age }}</td>
+        <td class="p-2">{{ e.salary }}</td>
+        <td class="p-2">
+          <button class="btn  btn-primary" style="margin-right: 5px;" routerLink="/update">Update</button> <!-- [routerLink]="['/update']"-->
+          <button class="btn  btn-danger" (click)="delete(e.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <button class="btn btn-success" (click)="exportToExcel()">Export to Excel</button>
+  

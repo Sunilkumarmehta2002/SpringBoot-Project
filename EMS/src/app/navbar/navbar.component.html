@@ -1,0 +1,52 @@
+<div class="d-flex" id="wrapper">
+    <!-- Sidebar-->
+    <div class="border-end " id="sidebar-wrapper">
+      <div class="sidebar-heading border-black bg-light">
+        Employee Management System
+      </div>
+      <div class="list-group list-group-flush">
+        <a class="list-group-item list-group-item-action list-group-item-info p-3" 
+        href="#!" 
+        routerLink="/view" 
+        routerLinkActive="active"
+        >View Employees</a>
+        <a
+          class="list-group-item list-group-item-action list-group-item-primary p-3"
+          href="#!"
+          routerLink="/find"
+          routerLinkActive="active"
+          >Search Employee</a
+        >
+        <a
+          class="list-group-item list-group-item-action list-group-item-secondary p-3"
+          href="#!"
+          href="#!"
+          routerLink="/insert"
+          routerLinkActive="active"
+          >Add Employee</a
+        >
+        <a
+          class="list-group-item list-group-item-action list-group-item-success p-3"
+          href="#!"
+          href="#!"
+          routerLink="/update"
+          routerLinkActive="active"
+          >Update Employee</a
+        >
+        <a
+          class="list-group-item list-group-item-action list-group-item-warning p-3"
+          href="#!"
+          href="#!"
+          routerLink="/delete"
+          routerLinkActive="active"
+          >Delete Employee</a
+        >
+      </div>
+    </div>
+    <div class="container-fluid p-4">
+      <br />
+      <br />
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  

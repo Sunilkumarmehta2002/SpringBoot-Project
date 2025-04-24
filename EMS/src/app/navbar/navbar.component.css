@@ -1,0 +1,7 @@
+.sidebar-heading{
+    background-color:rgb(60, 194, 131) !important;
+    color: rgb(255, 255, 255);
+    font-style: italic;
+    font-size: 20px;
+    font-weight: 500;
+}

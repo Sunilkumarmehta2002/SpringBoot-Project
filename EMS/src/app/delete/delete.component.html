@@ -1,0 +1,15 @@
+<div class="container">
+  <h2>Delete Employee</h2>
+
+  <form #delete="ngForm" (ngSubmit)="DeleteEmp(delete)" class="delete-form">
+      <!-- <label for="id" class="form-label">Employee ID:</label> -->
+      <input id="id" type="text" name="id" class="form-control" ngModel #id="ngModel" required placeholder="Delete Employee by ID">
+      
+      <div class="error-message" *ngIf="id.touched && id.invalid">Employee ID is required</div>
+
+      <button type="submit" class="btn btn-danger" [disabled]="delete.invalid">Delete</button>
+  </form>
+</div>
+
+
+

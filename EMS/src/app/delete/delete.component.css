@@ -1,0 +1,92 @@
+/* Container */
+.container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Heading */
+h2 {
+   
+    color:rgb(60, 194, 131);
+    margin-bottom: 20px;
+}
+
+/* Form Styling */
+.delete-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Label */
+.form-label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+/* Input Field */
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #dc3545;
+    box-shadow: 0 0 5px rgba(220, 53, 69, 0.5);
+}
+
+/* Error Message */
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+/* Button */
+.btn-danger {
+    background: #dc3545;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-danger:hover {
+    background: #b52b37;
+}
+
+/* Disable Button */
+button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+/* Responsive */
+@media screen and (max-width: 480px) {
+    .container {
+        width: 90%;
+    }
+
+    .form-control {
+        font-size: 14px;
+    }
+
+    .btn-danger {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+}

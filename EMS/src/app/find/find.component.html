@@ -1,0 +1,45 @@
+<div class="container">
+  <h2>Search Employee</h2>
+
+  <!-- Search Form -->
+  <form #eid="ngForm" (ngSubmit)="search(eid)" class="search-form">
+      <div class="input-group">
+          <span class="input-group-text">ID</span>
+          <input type="text" class="form-control" id="id" name="id" placeholder="Search Employee by ID" ngModel #id="ngModel" required>
+          <button type="submit" class="btn btn-primary" [disabled]="eid.invalid">Find</button>
+      </div>
+      <div class="error-message" *ngIf="id.touched && id.invalid">User ID is required</div>
+  </form>
+</div>
+
+<div>
+  <!-- Employee Table -->
+  <table class="table table-bordered table-striped table-hover" *ngIf="emp">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Age</th>
+            <th scope="col">Salary</th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="text-center">
+            <td class="p-2">{{ emp.id }}</td>
+            <td class="p-2">{{ emp.fname }}</td>
+            <td class="p-2">{{ emp.lname }}</td>
+            <td class="p-2">{{ emp.age }}</td>
+            <td class="p-2">{{ emp.salary }}</td>
+            <td class="p-2">
+                <button class="btn btn-primary" routerLink="/update" style="margin-right: 5px;">Update</button>
+                <button class="btn btn-danger" routerLink="/delete">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+<!-- <div>
+  <button class="btn btn-info" style="margin-right: 5px;" routerLink="/view">View All</button>
+</div> -->
